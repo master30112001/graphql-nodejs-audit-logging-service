@@ -1,6 +1,8 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
+  scalar Date
+
   type Query {
     hello: String!
     logs: [AuditLog!]!
@@ -8,6 +10,7 @@ const typeDefs = gql`
 
   type AuditLog {
     id: ID!
+    createdAt: Date
     name: String!
     severity: String!
     component: String!

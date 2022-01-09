@@ -1,6 +1,8 @@
 const { AuditLog } = require("../models/AuditLog");
+const GraphQLDate = require("@parameter1/graphql-type-date");
 
 const resolvers = {
+  Date: GraphQLDate,
   Query: {
     hello: () => "hi",
     logs: async () => await AuditLog.find(),
