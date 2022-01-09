@@ -5,12 +5,24 @@ const typeDefs = gql`
     hello: String!
     cats: [Cat!]!
   }
+
   type Cat {
     id: ID!
     name: String!
+    severity: String!
+    component: String!
+    context: String!
+    message: String!
   }
+
   type Mutation {
-    createCat(name: String!): Cat!
+    createCat(
+      name: String!
+      severity: String!
+      component: String!
+      context: String!
+      message: String!
+    ): Cat!
   }
 `;
 
