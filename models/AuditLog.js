@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Cat = mongoose.model("Cat", {
+const AuditLog = mongoose.model("AuditLog", {
   name: String,
   createdAt: Date,
   severity: String,
@@ -9,4 +9,4 @@ const Cat = mongoose.model("Cat", {
   message: String,
 });
 
-module.exports = { Cat };
+module.exports = { AuditLog };

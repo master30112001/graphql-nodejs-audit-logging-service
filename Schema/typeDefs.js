@@ -3,10 +3,10 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   type Query {
     hello: String!
-    cats: [Cat!]!
+    logs: [AuditLog!]!
   }
 
-  type Cat {
+  type AuditLog {
     id: ID!
     name: String!
     severity: String!
@@ -16,13 +16,13 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createCat(
+    createLog(
       name: String!
       severity: String!
       component: String!
       context: String!
       message: String!
-    ): Cat!
+    ): AuditLog!
   }
 `;
 

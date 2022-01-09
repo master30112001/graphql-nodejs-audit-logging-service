@@ -1,13 +1,13 @@
-const { Cat } = require("../models/Cat");
+const { AuditLog } = require("../models/AuditLog");
 
 const resolvers = {
   Query: {
     hello: () => "hi",
-    cats: async () => await Cat.find(),
+    logs: async () => await AuditLog.find(),
   },
   Mutation: {
-    createCat: async (_, { name, severity, component, context, message }) => {
-      const kitty = new Cat({
+    createLog: async (_, { name, severity, component, context, message }) => {
+      const latestlog = new AuditLog({
         name,
         severity,
         component,
@@ -16,8 +16,8 @@ const resolvers = {
         createdAt: Date.now(),
       });
 
-      await kitty.save();
-      return kitty;
+      await latestlog.save();
+      return latestlog;
     },
   },
 };
