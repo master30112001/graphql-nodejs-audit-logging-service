@@ -22,7 +22,7 @@ const startServer = async () => {
   server.applyMiddleware({ app });
 
   await mongoose.connect(
-    "mongodb+srv://taskapp:Vedant%40300@cluster0.hdkoi.mongodb.net/myloggerapp?retryWrites=true&w=majority",
+    "mongodb+srv://taskapp:<password>@cluster0.hdkoi.mongodb.net/myloggerapp?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
     }
