@@ -1,4 +1,6 @@
 const { AuditLog } = require("../models/AuditLog");
+
+// GraphQLDate is for scalar Date type
 const GraphQLDate = require("@parameter1/graphql-type-date");
 
 const resolvers = {
@@ -24,4 +26,5 @@ const resolvers = {
   },
 };
 
+// exports
 module.exports = { resolvers };

@@ -1,5 +1,7 @@
+// package imports
 const mongoose = require("mongoose");
 
+// creating AuditLog model
 const AuditLog = mongoose.model("AuditLog", {
   name: String,
   createdAt: Date,
@@ -9,4 +11,5 @@ const AuditLog = mongoose.model("AuditLog", {
   message: String,
 });
 
+// exports
 module.exports = { AuditLog };

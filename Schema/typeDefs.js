@@ -1,3 +1,4 @@
+// package imports
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
@@ -29,7 +30,5 @@ const typeDefs = gql`
   }
 `;
 
+// exports
 module.exports = { typeDefs };
-
-// the 'Cat!' after the semicolon in typeMutation after CreateCat statement is for
-// returning a value... here we are returning the Cat Type(object)
